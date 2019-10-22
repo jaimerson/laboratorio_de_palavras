@@ -1,0 +1,27 @@
+{
+  "name": "lab-de-palavras",
+  "version": "1.0.0",
+  "description": "Laboratório de Palavras é um projeto desenvolvido para disciplina de Software Livre (IMD0530), que visa o ensino da língua portuguesa nas primeiras fases de estudo.",
+  "main": "main.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "electron ./dist/main.js"
+  },
+  "keywords": [
+    "palavras",
+    "laboratorio",
+    "lab",
+    "softwarelivre"
+  ],
+  "author": "",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/node": "^12.11.5",
+    "electron": "^7.0.0"
+  },
+  "dependencies": {
+    "pixi.js": "^5.1.5",
+    "typescript": "^3.6.4"
+  }
+}
