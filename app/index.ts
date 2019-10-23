@@ -8,8 +8,8 @@ document.body.appendChild(app.view);
 const stage: Container = new Container();
 
 const message: Text = new Text(
-	'Hello Pixi!',
-	{ fontFamily: 'Arial', fontSize: 32, fill: 'white' }
+  'Hello Pixi!',
+  { fontFamily: 'Arial', fontSize: 32, fill: 'white' }
 );
 
 message.position.set(app.view.width / 2 - message.width / 2, app.view.height / 2 - message.height / 2);
@@ -17,8 +17,8 @@ stage.addChild(message);
 app.renderer.render(stage);
 
 function gameLoop(): void {
-	requestAnimationFrame(gameLoop);
-	app.renderer.render(stage);
+  requestAnimationFrame(gameLoop);
+  app.renderer.render(stage);
 }
 
 gameLoop();
