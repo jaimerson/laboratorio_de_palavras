@@ -2,10 +2,17 @@
   "name": "lab-de-palavras",
   "version": "1.0.0",
   "description": "Laboratório de Palavras é um projeto desenvolvido para disciplina de Software Livre (IMD0530), que visa o ensino da língua portuguesa nas primeiras fases de estudo.",
-  "main": "main.ts",
+  "main": "build/index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "electron ./dist/main.js"
+    "lint:gulp": "gulp lint",
+    "build:gulp": "gulp build",
+    "build:web": "gulp build --web",
+    "lint": "npm run lint:gulp -s",
+    "prebuild": "npm run lint:gulp -s",
+    "build": "npm run build:gulp -s",
+    "preweb": "npm run lint:gulp -s",
+    "web": "npm run build:web",
+    "start": "electron ."
   },
   "keywords": [
     "palavras",
@@ -16,11 +23,24 @@
   "author": "",
   "license": "GPL-3.0",
   "devDependencies": {
-    "@types/node": "^12.11.5",
-    "electron": "^7.0.0"
-  },
-  "dependencies": {
-    "pixi.js": "^5.1.5",
-    "typescript": "^3.6.4"
+    "@types/electron": "^1.6.10",
+    "@types/node": "^11.11.3",
+    "@types/pixi.js": "^4.8.6",
+    "del": "^4.0.0",
+    "electron": "^4.0.8",
+    "gulp": "^4.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-tslint": "^8.1.4",
+    "gulp-typescript": "^5.0.0",
+    "merge2": "^1.2.3",
+    "minimist": "^1.2.0",
+    "pixi.js": "^4.8.6",
+    "ts-loader": "^5.3.3",
+    "tslint": "^5.13.1",
+    "tslint-eslint-rules": "^5.4.0",
+    "typescript": "^3.3.3333",
+    "webpack": "^4.29.6",
+    "webpack-node-externals": "^1.7.2",
+    "webpack-stream": "^5.2.1"
   }
 }
