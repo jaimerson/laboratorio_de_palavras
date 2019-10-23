@@ -16,7 +16,6 @@
   "author": "",
   "license": "GPL-3.0",
   "devDependencies": {
-    "@types/electron": "^1.6.10",
     "@types/node": "^12.11.5",
     "electron": "^7.0.0"
   },

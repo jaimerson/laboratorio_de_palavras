@@ -1,36 +1,6 @@
 import * as PIXI from 'pixi.js';
 
-// const app = new PIXI.Application();
-
-// // The application will create a canvas element for you that you
-// // can then insert into the DOM.
-// document.body.appendChild(app.view);
-
-// // load the texture we need
-// PIXI.loader.add('bunny', 'bunny.png').load((loader, resources) => {
-
-//     // This creates a texture from a 'bunny.png' image.
-//     const bunny = new PIXI.Sprite(resources.bunny.texture);
-
-//     // Setup the position of the bunny
-//     bunny.x = app.renderer.width / 2;
-//     bunny.y = app.renderer.height / 2;
-
-//     // Rotate around the center
-//     bunny.anchor.x = 0.5;
-//     bunny.anchor.y = 0.5;
-
-//     // Add the bunny to the scene we are building.
-//     app.stage.addChild(bunny);
-
-//     // Listen for frame updates
-//     app.ticker.add(() => {
-//          // each frame we spin the bunny around a bit
-//         bunny.rotation += 0.01;
-//     });
-// });
-
-let data: PIXI.Loader;
+let data: PIXI.interaction.InteractionData | null;
 let alpha;
 let dragging: boolean;
 let position: {x: number, y: number};
@@ -100,7 +70,7 @@ function createBunny(x: number, y: number) {
     stage.addChild(bunny);
 }
 
-requestAnimationFrame(animate);
+//requestAnimationFrame(animate);
 
 function animate() {
 
@@ -110,7 +80,7 @@ function animate() {
     renderer.render(stage);
 }
 
-function onDragStart(event) {
+function onDragStart(event: PIXI.interaction.InteractionEvent) {
     // store a reference to the data
     // the reason for this is because of multitouch
     // we want to track the movement of this particular touch
@@ -129,8 +99,8 @@ function onDragEnd() {
 }
 
 function onDragMove() {
-    if (dragging) {
-        var newPosition = data.getLocalPosition(parent);
+    if (dragging && data) {
+        var newPosition = data.getLocalPosition(stage);
         position.x = newPosition.x;
         position.y = newPosition.y;
     }
