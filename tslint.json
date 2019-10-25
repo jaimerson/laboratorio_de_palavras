@@ -33,7 +33,6 @@
     "semicolon": [true, "always"],
     "comment-format": [true, "check-lowercase", { "ignore-words": ["TODO", "HACK"] }],
     "ter-arrow-body-style": [true, "as-needed"],
-    "ter-arrow-parens": [true, "as-needed"],
     "ter-arrow-spacing": [true],
     "ter-prefer-arrow-callback": [true],
     "only-arrow-functions": [true, "allow-named-functions"],
