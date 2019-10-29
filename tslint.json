@@ -54,7 +54,7 @@
     "ordered-imports": [true],
     "prefer-for-of": true,
     "use-isnan": true,
-    "array-type": [true],
+    "array-type": [false],
     "interface-name": [true, "never-prefix"],
     "radix": false,
     "typedef": [
