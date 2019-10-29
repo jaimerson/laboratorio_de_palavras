@@ -11,7 +11,7 @@ TO-DO: Equipe de pedagogia, escrever sobre o projeto/jogo, como funciona, exempl
 Para executar a aplicação em desenvolvimento, você deve primeiro baixar uma cópia do código fonte para sua máquina
 
 ```shell
-git clone https://projetos.imd.ufrn.br/softwarelivre/laboratorio_de_palavras.git
+git clone https://github.com/jaimerson/laboratorio_de_palavras.git
 ```
 
 Então, baixar as dependencia do projeto
