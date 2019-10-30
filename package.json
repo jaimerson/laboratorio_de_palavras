@@ -12,7 +12,8 @@
     "build": "npm run build:gulp -s",
     "preweb": "npm run lint:gulp -s",
     "web": "npm run build:web",
-    "start": "electron ."
+    "start": "electron .",
+    "test": "ts-node node_modules/jasmine/bin/jasmine --config=jasmine.json"
   },
   "keywords": [
     "palavras",
@@ -24,6 +25,7 @@
   "license": "GPL-3.0",
   "devDependencies": {
     "@types/electron": "^1.6.10",
+    "@types/jasmine": "^3.4.4",
     "@types/node": "^11.11.3",
     "@types/pixi.js": "^4.8.6",
     "del": "^4.0.0",
@@ -32,13 +34,16 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-tslint": "^8.1.4",
     "gulp-typescript": "^5.0.0",
+    "jasmine": "^3.5.0",
     "merge2": "^1.2.3",
     "minimist": "^1.2.0",
+    "nyc": "^14.1.1",
     "pixi.js": "^4.8.6",
     "ts-loader": "^5.3.3",
+    "ts-node": "^8.4.1",
     "tslint": "^5.13.1",
     "tslint-eslint-rules": "^5.4.0",
-    "typescript": "^3.3.3333",
+    "typescript": "^3.6.4",
     "webpack": "^4.29.6",
     "webpack-node-externals": "^1.7.2",
     "webpack-stream": "^5.2.1"
