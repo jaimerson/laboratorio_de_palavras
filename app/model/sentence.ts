@@ -3,7 +3,7 @@ import { SentenceNotValid } from '../utils/exceptions/sentence-not-valid';
 import { Result } from './result';
 
 export class Sentence {
-  private base: string;
+  public base: string;
   private values: string[];
   private results: { [id: string]: Result };
 
@@ -43,7 +43,7 @@ export class Sentence {
     }
 
     if (Object.keys(results).length !== this.factorial(numberOfPlaceholders)) {
-      throw new SentenceNotValid(`Expected ${this.factorial(numberOfPlaceholders)} values, got ${Object.keys(results).length}`);
+      throw new SentenceNotValid(`Expected ${this.factorial(numberOfPlaceholders)} results, got ${Object.keys(results).length}`);
     }
   }
 

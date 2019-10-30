@@ -1,8 +1,6 @@
 import { Application, Text } from 'pixi.js';
 import Scene from '../interfaces/scene';
-import quotes from '../model/quotes';
-import { Result } from '../model/result';
-import { Sentence } from '../model/sentence';
+import SentenceRepository from '../repositories/sentence_repository';
 import SceneManager from '../scene_manager';
 import GameScene from './game_scene';
 
@@ -28,25 +26,11 @@ export default class MainMenuScene implements Scene {
 
     button.position.set(message.position.x, message.position.y + 50);
 
-    const quotesTestButton = new Text(
-      'Test quotes',
-      { fontSize: 30, fill: 'white' }
-    );
-
-    quotesTestButton.position.set(button.position.x, button.position.y + 50);
-    quotesTestButton.interactive = true;
-    quotesTestButton.buttonMode = true;
-    quotesTestButton.on('pointerdown', this.testQuotes);
-
-    [message, button, quotesTestButton].forEach((x) => { container.addChild(x); });
+    [message, button].forEach((x) => { container.addChild(x); });
   }
 
   private onButtonClick(event: PIXI.interaction.InteractionEvent): any {
-    SceneManager.setCurrentScene(new GameScene());
+    SceneManager.setCurrentScene(new GameScene(SentenceRepository.randomSentence()));
   }
 
-  private testQuotes(event: PIXI.interaction.InteractionEvent) {
-    console.log(quotes[0].resultFor(['carro', 'menino', 'skate']));
-    console.log(quotes[1].resultFor(['menino', 'carro', 'skate']));
-  }
 }
