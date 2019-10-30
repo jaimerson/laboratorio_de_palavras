@@ -1,7 +1,8 @@
+import DataQuote from '../interfaces/data-quote';
 import { Result } from './result';
 import { Sentence } from './sentence';
 
-const dataQuotes = [
+const dataQuotes: DataQuote[] = [
   {
     base: 'O {} atropelou o {}',
     values: ['carro', 'menino'],
