@@ -2,7 +2,7 @@
   "name": "lab-de-palavras",
   "version": "1.0.0",
   "description": "Laboratório de Palavras é um projeto desenvolvido para disciplina de Software Livre (IMD0530), que visa o ensino da língua portuguesa nas primeiras fases de estudo.",
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "lint:gulp": "gulp lint",
     "build:gulp": "gulp build",
@@ -20,11 +20,12 @@
   },
   "build": {
     "appId": "br.com.labdepalavras",
+    "asar": false,
     "mac": {
       "category": "public.app-category.education"
     },
-    "asar": false,
     "files": [
+      "./dist/**/*",
       "./build/**/*"
     ],
     "directories": {
@@ -46,6 +47,7 @@
     "@types/node": "^11.11.3",
     "@types/pixi.js": "^4.8.6",
     "del": "^4.0.0",
+    "del-cli": "^3.0.0",
     "electron": "^4.0.8",
     "electron-builder": "^22.1.0",
     "gulp": "^4.0.0",
