@@ -14,6 +14,7 @@ ElectronApp.on('ready', () => {
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
+  mainWindow.webContents.openDevTools();
 });
 
 ElectronApp.on('window-all-closed', () => {
