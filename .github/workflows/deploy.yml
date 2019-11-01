@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - dist-clean
 
 jobs:
   build:
@@ -35,7 +36,7 @@ jobs:
           yarn run dist
       - name: Cleanup artifacts
         run: |
-          npx del-cli "dist/*" "!*.exe" "!*.deb" "!*.AppImage" "!*.dmg)"
+          yarn run dist:cleanfolder
       - name: Upload artifacts
         uses: actions/upload-artifact@v1
         with:
