@@ -42,7 +42,7 @@ yarn start
 
 TO-DO: Link para todos os autores dos projetos
 
-- [Arthur Cohen](www.forcohen.com)
+- [Arthur Cohen](http://www.forcohen.com)
 
 ## License
 
