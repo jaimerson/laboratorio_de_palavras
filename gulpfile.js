@@ -89,3 +89,15 @@ gulp.task("build", () => {
       .pipe(gulp.dest("dist/app/")),
   ]);
 });
+
+
+gulp.task("dist:cleanfolder", () => 
+  del([
+    "dist/*",
+    "!dist/*.exe",
+    "!dist/*.deb",
+    "!dist/*.AppImage",
+    "!dist/*.dmg",
+    "!dist/*.snap"
+  ])
+);
