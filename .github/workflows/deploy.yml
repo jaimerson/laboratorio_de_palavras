@@ -2,10 +2,8 @@ name: Electron CD
 
 on:
   push:
-    branches:
-      - master
-      - dist-clean
-
+    tags:
+      - '*'
 jobs:
   build:
 
