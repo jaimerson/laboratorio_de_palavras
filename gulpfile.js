@@ -34,17 +34,17 @@ gulp.task("lint", () => merge([
 ]));
 
 gulp.task("build", () => {
-  del.sync(["./build/**/*.*"]);
+  del.sync(["./dist/**/*.*"]);
   gulp.src("./src/**/*.js")
-    .pipe(gulp.dest("build/"));
+    .pipe(gulp.dest("dist/"));
   gulp.src("./src/**/*.json")
-    .pipe(gulp.dest("build/"));
+    .pipe(gulp.dest("dist/"));
   gulp.src("./src/**/*.png")
-    .pipe(gulp.dest("build/"));
+    .pipe(gulp.dest("dist/"));
   gulp.src("./src/**/*.ttf")
-    .pipe(gulp.dest("build/"));
+    .pipe(gulp.dest("dist/"));
   gulp.src(["./app/**/*.*", "!./app/**/*.ts"])
-    .pipe(gulp.dest("build/app/"));
+    .pipe(gulp.dest("dist/app/"));
 
   const appCompile = gulp.src("./src/**/*.ts")
     .pipe(sourcemaps.init())
@@ -84,8 +84,20 @@ gulp.task("build", () => {
           return path.relative(path.join(file.cwd, file.path), file.base);
         },
       }))
-      .pipe(gulp.dest("build/")),
+      .pipe(gulp.dest("dist/")),
     renderCompile
-      .pipe(gulp.dest("build/app/")),
+      .pipe(gulp.dest("dist/app/")),
   ]);
 });
+
+
+gulp.task("dist:cleanfolder", () => 
+  del([
+    "dist/*",
+    "!dist/*.exe",
+    "!dist/*.deb",
+    "!dist/*.AppImage",
+    "!dist/*.dmg",
+    "!dist/*.snap"
+  ])
+);

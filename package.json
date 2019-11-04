@@ -2,29 +2,31 @@
   "name": "lab-de-palavras",
   "version": "1.0.0",
   "description": "Laboratório de Palavras é um projeto desenvolvido para disciplina de Software Livre (IMD0530), que visa o ensino da língua portuguesa nas primeiras fases de estudo.",
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "lint:gulp": "gulp lint",
     "build:gulp": "gulp build",
     "build:web": "gulp build --web",
-    "lint": "npm run lint:gulp -s",
-    "prebuild": "npm run lint:gulp -s",
-    "build": "npm run build:gulp -s",
-    "preweb": "npm run lint:gulp -s",
-    "web": "npm run build:web",
+    "lint": "yarn run lint:gulp -s",
+    "prebuild": "yarn run lint:gulp -s",
+    "build": "yarn run build:gulp -s",
+    "preweb": "yarn run lint:gulp -s",
+    "web": "yarn run build:web",
     "start": "electron .",
     "test": "ts-node node_modules/jasmine/bin/jasmine --config=jasmine.json",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
+    "dist:cleanfolder": "gulp dist:cleanfolder",
     "postinstall": "electron-builder install-app-deps"
   },
   "build": {
     "appId": "br.com.labdepalavras",
+    "asar": false,
     "mac": {
       "category": "public.app-category.education"
     },
-    "asar": false,
     "files": [
+      "./dist/**/*",
       "./build/**/*"
     ],
     "directories": {
@@ -46,6 +48,7 @@
     "@types/node": "^11.11.3",
     "@types/pixi.js": "^4.8.6",
     "del": "^4.0.0",
+    "del-cli": "^3.0.0",
     "electron": "^4.0.8",
     "electron-builder": "^22.1.0",
     "gulp": "^4.0.0",

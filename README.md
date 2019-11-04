@@ -17,19 +17,19 @@ git clone https://github.com/jaimerson/laboratorio_de_palavras.git
 Então, baixar as dependencia do projeto
 
 ```shell
-npm install
+yarn install
 ```
 
 Compilar a aplicação
 
 ```shell
-npm run build
+yarn run build
 ```
 
 Executar a aplicação
 
 ```shell
-npm start
+yarn start
 ```
 
 ## Built with
@@ -42,7 +42,7 @@ npm start
 
 TO-DO: Link para todos os autores dos projetos
 
-- [Arthur Cohen](www.forcohen.com)
+- [Arthur Cohen](http://www.forcohen.com)
 
 ## License
 

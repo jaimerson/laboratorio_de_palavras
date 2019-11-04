@@ -2,9 +2,8 @@ name: Electron CD
 
 on:
   push:
-    branches:
-      - master
-
+    tags:
+      - '*'
 jobs:
   build:
 
@@ -31,19 +30,20 @@ jobs:
           yarn install
       - name: Publish
         run: |
+          yarn run build
           yarn run dist
       - name: Cleanup artifacts
         run: |
-          npx rimraf "build/!(*.exe|*.deb|*.AppImage|*.dmg)"
+          yarn run dist:cleanfolder
       - name: Upload artifacts
         uses: actions/upload-artifact@v1
         with:
           name: ${{ matrix.os }}
-          path: build
+          path: dist
       - name: Release
-        uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v1
         with:
-          files: "build/**"
+          files: "dist/**"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
