@@ -1,9 +1,9 @@
 const colors = {
-    preto: '#272526',
-    roxo: '#B5549B',
-    laranja: '#D26836',
-    azulEscuro: '#0782C6',
-    azulClaro: '#89C7EC',
+    black: '#272526',
+    purple: '#B5549B',
+    orange: '#D26836',
+    darkBlue: '#0782C6',
+    lightBlue: '#89C7EC',
 }
 
 export default colors;
