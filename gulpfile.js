@@ -16,6 +16,11 @@ const nodeExternals = require("webpack-node-externals");
 const appProject = gulpTs.createProject("tsconfig.json");
 const typeCheck = tslint.Linter.createProgram("tsconfig.json");
 
+gulp.task("watch", () => {
+  gulp.watch("./app/**/*.ts", gulp.series("build"));
+  gulp.watch("./src/**/*.ts", gulp.series("build"));
+});
+
 gulp.task("lint", () => merge([
   gulp.src("./src/**/*.ts")
     .pipe(gulpTslint({

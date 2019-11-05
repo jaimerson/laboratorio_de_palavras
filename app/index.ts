@@ -1,8 +1,13 @@
 import { Application, Container, Text } from 'pixi.js';
+import { colors } from './config';
 import SceneManager from './scene_manager';
 import MainMenuScene from './scenes/main_menu_scene';
 
-const app: Application = new Application(800, 600, { backgroundColor : 0x000000 });
+const app: Application = new Application(window.innerWidth, window.innerHeight, {
+  backgroundColor: colors.background,
+  antialias: true,
+  resolution: 1
+});
 app.view.style.position = 'absolute';
 app.view.style.display = 'block';
 document.body.appendChild(app.view);

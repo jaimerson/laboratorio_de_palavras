@@ -7,6 +7,10 @@ export default class GameScene implements Scene {
 
   constructor(public sentence: Sentence) {}
 
+  public setup(container: PIXI.Container) {
+    console.log('setup');
+  }
+
   public render(container: PIXI.Container, app: Application) {
     const message: Text = new Text(
             this.sentence.base.replace(/{}/g, '_______'),
