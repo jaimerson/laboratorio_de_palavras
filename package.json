@@ -6,6 +6,7 @@
   "scripts": {
     "lint:gulp": "gulp lint",
     "build:gulp": "gulp build",
+    "watch": "gulp watch",
     "build:web": "gulp build --web",
     "lint": "yarn run lint:gulp -s",
     "prebuild": "yarn run lint:gulp -s",
@@ -51,10 +52,12 @@
     "del-cli": "^3.0.0",
     "electron": "^4.0.8",
     "electron-builder": "^22.1.0",
+    "electron-reload": "^1.5.0",
     "gulp": "^4.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-tslint": "^8.1.4",
     "gulp-typescript": "^5.0.0",
+    "gulp-watch": "^5.0.1",
     "jasmine": "^3.5.0",
     "merge2": "^1.2.3",
     "minimist": "^1.2.0",
@@ -70,8 +73,8 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "pixi.js": "^4.8.6",
     "@types/yaml": "^1.2.0",
+    "pixi.js": "^4.8.6",
     "yaml": "^1.7.2"
   }
 }

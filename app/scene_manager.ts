@@ -15,16 +15,24 @@ export default class SceneManager {
     this.app = app;
     this.container = container;
     this.currentScene = currentScene;
+    this.runSetup(currentScene, container);
     // gambiarra para singleton pattern
     SceneManager.instance = this;
   }
 
   public setCurrentScene(scene: Scene): any {
+    this.runSetup(scene, this.container);
     this.container.removeChildren();
     this.currentScene = scene;
   }
 
   public renderCurrentScene() {
     this.currentScene.render(this.container, this.app);
+  }
+
+  private runSetup(scene: Scene, container: Container) {
+    if (scene.setup) {
+      scene.setup(container);
+    }
   }
 }
