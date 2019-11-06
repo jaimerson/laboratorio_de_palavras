@@ -1,0 +1,121 @@
+{"frames": {
+
+"arrow1.png":
+{
+	"frame": {"x":545,"y":186,"w":686,"h":470},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":289,"y":283,"w":686,"h":470},
+	"sourceSize": {"w":1600,"h":1200}
+},
+"arrow2.png":
+{
+	"frame": {"x":1,"y":658,"w":686,"h":470},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":625,"y":283,"w":686,"h":470},
+	"sourceSize": {"w":1600,"h":1200}
+},
+"clara.png":
+{
+	"frame": {"x":689,"y":658,"w":516,"h":611},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":109,"w":516,"h":611},
+	"sourceSize": {"w":1280,"h":720}
+},
+"clara2.png":
+{
+	"frame": {"x":1207,"y":658,"w":516,"h":611},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":109,"w":516,"h":611},
+	"sourceSize": {"w":1280,"h":720}
+},
+"clara3.png":
+{
+	"frame": {"x":1,"y":1271,"w":516,"h":611},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":109,"w":516,"h":611},
+	"sourceSize": {"w":1280,"h":720}
+},
+"logo.png":
+{
+	"frame": {"x":1,"y":186,"w":542,"h":302},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":542,"h":302},
+	"sourceSize": {"w":542,"h":302}
+},
+"mesa.png":
+{
+	"frame": {"x":184,"y":1,"w":636,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":570,"y":635,"w":636,"h":85},
+	"sourceSize": {"w":1280,"h":720}
+},
+"placa.png":
+{
+	"frame": {"x":1,"y":1,"w":181,"h":46},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":606,"y":668,"w":181,"h":46},
+	"sourceSize": {"w":1280,"h":720}
+},
+"pot1.png":
+{
+	"frame": {"x":1544,"y":1,"w":126,"h":183},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":650,"y":528,"w":126,"h":183},
+	"sourceSize": {"w":1280,"h":720}
+},
+"potion2.png":
+{
+	"frame": {"x":1337,"y":1,"w":67,"h":180},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":854,"y":527,"w":67,"h":180},
+	"sourceSize": {"w":1280,"h":720}
+},
+"potion3.png":
+{
+	"frame": {"x":1406,"y":1,"w":136,"h":182},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":982,"y":528,"w":136,"h":182},
+	"sourceSize": {"w":1280,"h":720}
+},
+"prateleira.png":
+{
+	"frame": {"x":822,"y":1,"w":513,"h":152},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":22,"w":513,"h":152},
+	"sourceSize": {"w":1280,"h":720}
+},
+"quadro.png":
+{
+	"frame": {"x":519,"y":1271,"w":1030,"h":641},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":116,"y":41,"w":1030,"h":641},
+	"sourceSize": {"w":1280,"h":720}
+}},
+"animations": {
+	"arrow": ["arrow1.png","arrow2.png"],
+	"clara": ["clara2.png","clara3.png"],
+	"potion": ["potion2.png","potion3.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "atlasLabWord.png",
+	"format": "RGBA8888",
+	"size": {"w":1724,"h":1913},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:70e99c734c6b290159e60efae12684ad:2d954f31b34f4fbf96c0bb2c719b9c2c:47cac2a9db4d4471f4bb4c15f634bff2$"
+}
+}
