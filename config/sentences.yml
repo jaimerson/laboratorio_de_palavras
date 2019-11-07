@@ -1,24 +1,60 @@
 - type: nouns
-  base: O {} correu atrás do {}
-  values:
-    - menino
-    - cachorro
-  results:
-    - title: 'O menino correu atrás do cachorro'
-      imagePath: 'http://placekitten.com/200/200'
-      comment: 'O cachorro fugiu e o menino foi atrás dele'
-    - title: 'O cachorro correu atrás do menino'
-      imagePath: 'http://placekitten.com/200/200'
-      comment: 'O cachorro queria brincar'
-- type: nouns
-  base: O {} tomou um {}
+  base: O {} toma o {}
   values:
     - menino
     - sorvete
   results:
-    - title: 'O menino tomou um sorvete'
-      imagePath: 'http://placekitten.com/200/200'
-      comment: ''
-    - title: 'O sorvete tomou um menino'
-      imagePath: 'http://placekitten.com/200/200'
-      comment: ''
+    - title: 'O menino toma o sorvete'
+      imagePath: '../app/assets/images/results/meninosorerve.png'
+      comment: 'O menino toma o sorvete pelo calor que está fazendo na praia'
+    - title: 'O sorvete toma o menino'
+      imagePath: ../app/assets/images/results/sorvetemenino.png'
+      comment: 'O sorvete tomou o menino'
+- type: nouns
+  base: '{} foi no {}'
+  values:
+    - João
+    - carro
+  results:
+    - title: 'João foi no carro'
+      imagePath: '../app/assets/images/results/carrojose1.png'
+      comment: 'João foi no carro para o jogo de futebol'
+    - title: 'Carro foi no João'
+      imagePath: ../app/assets/images/results/josecarro2.png'
+      comment: 'O carro foi dentro de joão'
+- type: nouns
+  base: A {} jogou a {}
+  values:
+    - pessoa
+    - bola
+  results:
+    - title: 'A pessoa jogou a bola'
+      imagePath: '../app/assets/images/results/meninobola.png'
+      comment: 'A pessoa jogou a bola na cesta'
+    - title: 'A bola jogou a pessoa'
+      imagePath: ../app/assets/images/results/bolamenino.png'
+      comment: 'A bola jogou a pessoa fora'
+- type: nouns
+  base: A {} viu a {}
+  values:
+    - menina
+    - cadeira
+  results:
+    - title: 'A menina viu a cadeira'
+      imagePath: '../app/assets/images/results/meninacadeira.png'
+      comment: 'A menina viu a cadeira se mexer'
+    - title: 'A cadeira viu a menina'
+      imagePath: ../app/assets/images/results/cadeiramenina.png'
+      comment: 'A cadeira viu a menina brincar'
+- type: nouns
+  base: O {} está no {}
+  values:
+    - barco
+    - mar
+  results:
+    - title: 'O barco está no mar'
+      imagePath: '../app/assets/images/results/barcomar.png'
+      comment: 'O barco está no mar sem rumo'
+    - title: 'O mar navega no barco'
+      imagePath: ../app/assets/images/results/marbarco.png'
+      comment: 'O mar navega no barco para a costa'
