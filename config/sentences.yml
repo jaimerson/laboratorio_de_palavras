@@ -1,0 +1,24 @@
+- type: nouns
+  base: O {} correu atrás do {}
+  values:
+    - menino
+    - cachorro
+  results:
+    - title: 'O menino correu atrás do cachorro'
+      imagePath: 'http://placekitten.com/200/200'
+      comment: 'O cachorro fugiu e o menino foi atrás dele'
+    - title: 'O cachorro correu atrás do menino'
+      imagePath: 'http://placekitten.com/200/200'
+      comment: 'O cachorro queria brincar'
+- type: nouns
+  base: O {} tomou um {}
+  values:
+    - menino
+    - sorvete
+  results:
+    - title: 'O menino tomou um sorvete'
+      imagePath: 'http://placekitten.com/200/200'
+      comment: ''
+    - title: 'O sorvete tomou um menino'
+      imagePath: 'http://placekitten.com/200/200'
+      comment: ''

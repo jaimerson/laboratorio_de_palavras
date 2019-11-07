@@ -29,7 +29,7 @@
     </v-layout>
     <v-layout>
       <v-row>
-        <v-layout align="center" class="justify-space-around" ma-5 pa-5>
+        <v-layout align="center" class="center" ma-5 pa-5>
           <v-card flat class="background-home" max-height="400" max-width="100">
             <v-card-title>
               <v-btn text @click="msg=''; msg2=''">
@@ -45,7 +45,7 @@
             </v-btn>
             </v-card-title>
           </v-card>
-          <v-card flat class="background-home" max-height="300" max-width="100">
+          <v-card flat class="background-home" max-height="50" max-width="100">
             <v-card-title>
               <v-btn text @click="test">
                 <v-row align="center" justify="center" ma-0>
@@ -60,11 +60,11 @@
               </v-btn>
             </v-card-title>
           </v-card>
-          <v-card flat class="background-home" max-height="50" max-width="50">
+          <v-card flat class="background-home" max-height="50" max-width="100">
             <v-card-title>
               <v-btn text @click="test2"><v-row align="center" justify="center" ma-0>
                   <v-img
-                    max-height="400"
+                    max-height="100"
                     max-width="100"
                     src="../assets/img/lab_art/pngs/placa.png"
                   >
@@ -76,11 +76,6 @@
           </v-card>
         </v-layout>
       </v-row>
-      <!-- <v-img
-        src="../assets/img/lab_art/pngs/clara.png"
-        max-width="100"
-        >
-      </v-img> -->
     </v-layout>
   </v-container>
 </template>
