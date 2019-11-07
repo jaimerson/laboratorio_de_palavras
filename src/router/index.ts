@@ -3,7 +3,9 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Resultados from '../views/Resultados.vue'
 import Game from '../views/Game.vue'
-import Stats from '../views/Stats.vue'
+import Help from '../views/Help.vue'
+import Credits from '../views/Credits.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -13,19 +15,24 @@ const routes = [
     component: Home
   },
   {
-    path: '/results',
-    name: 'results',
-    component: Resultados
-  },
-  {
     path: '/game',
     name: 'game',
     component: Game
   },
   {
-    path: '/stats',
-    name: 'stats',
-    component: Stats
+    path: '/results',
+    name: 'results',
+    component: Resultados
+  },
+  {
+    path: '/help',
+    name: 'help',
+    component: Help
+  },
+  {
+    path: '/credits',
+    name: 'credits',
+    component: Credits
   }
 ]
 

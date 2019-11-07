@@ -71,7 +71,7 @@
               </v-img>
             </v-row>
             <v-card-title>
-              <v-btn text to="/results">
+              <v-btn text @click="generateSentence">
                 <v-row align="center" justify="center" ma-0>
                   <v-img
                     max-height="400"
@@ -90,7 +90,7 @@
             >
             </v-img>
             <v-card-title>
-              <v-btn text to="/results"><v-row align="center" justify="center" ma-0>
+              <v-btn text><v-row align="center" justify="center" ma-0>
                   <v-img
                     max-height="400"
                     max-width="120"
@@ -110,7 +110,24 @@
 
 <script>
 export default {
-  name: 'home'
+  name: 'home',
+  data () {
+    return {
+
+    }
+  },
+  methods: {
+    generateSentence () {
+      console.log('call randomSentence')
+      this.$store.dispatch('randomSentence')
+        .then(() => {
+          this.$router.go('/game')
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+    }
+  }
 }
 </script>
 <style>
