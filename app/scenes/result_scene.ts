@@ -7,9 +7,7 @@ import { Sentence } from '../model/sentence';
 export default class ResultScene implements Scene {
   public identifier: string = 'result';
 
-  constructor( public setence: Sentence ){
-    
-  }
+  constructor( public setence: Sentence ){}
 
   public render(container: PIXI.Container, app: Application) {
     //let Application = PIXI.Application
@@ -22,17 +20,12 @@ export default class ResultScene implements Scene {
       backgroundColor: 0x58D3F7
     });
 
-
-    let loader = PIXI.loader;
-	  loader
-      .add( "../assets/atlasLabWord.json" )
-      .load( setup );
+    const loader = PIXI.loader;
+	  loader.add( '../assets/atlasLabWord.json' ).load( setup );
 
     //[message, button].forEach((x) => { container.addChild(x); });
     //throw new Error('Method not implemented.');
 
-    function setup(){
-
-    }
+    function setup(){}
   }
 }

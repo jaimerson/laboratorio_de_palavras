@@ -39,9 +39,6 @@ export default class MainMenuScene implements Scene {
     buttonResultScreen.position.set(button.position.x, button.position.y + 50);
 
     [message, button, buttonResultScreen].forEach((x) => { container.addChild(x); });
-
-
-    
   }
 
   private onButtonClick(event: PIXI.interaction.InteractionEvent): any {
