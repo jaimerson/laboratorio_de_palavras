@@ -4,5 +4,8 @@
     <v-btn to="/">
       INICIO
     </v-btn>
+    <v-btn to="/game">
+      Voltar
+    </v-btn>
   </div>
 </template>

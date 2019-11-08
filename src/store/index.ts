@@ -16,8 +16,7 @@ export default new Vuex.Store({
   },
   actions: {
     randomSentence () {
-      var sentence : Sentence = SentenceRepository.getSentence()
-      console.log(sentence)
+      console.log(SentenceRepository.randomSentence())
     }
   },
   getters: {

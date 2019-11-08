@@ -32,6 +32,21 @@
         <v-layout align="center" class="center" ma-5 pa-5>
           <v-card flat class="background-home" max-height="400" max-width="100">
             <v-card-title>
+              <v-btn text to="/">
+                <v-row align="center" justify="center" ma-0>
+                  <v-img
+                    max-height="400"
+                    max-width="100"
+                    src="../assets/img/lab_art/pngs/placa.png"
+                  >
+                    Voltar
+                  </v-img>
+              </v-row>
+            </v-btn>
+            </v-card-title>
+          </v-card>
+          <v-card flat class="background-home" max-height="400" max-width="100">
+            <v-card-title>
               <v-btn text @click="msg=''; msg2=''">
                 <v-row align="center" justify="center" ma-0>
                   <v-img
@@ -69,6 +84,20 @@
                     src="../assets/img/lab_art/pngs/placa.png"
                   >
                     {{opcao2}}
+                  </v-img>
+                </v-row>
+              </v-btn>
+            </v-card-title>
+          </v-card>
+          <v-card flat class="background-home" max-height="50" max-width="100">
+            <v-card-title>
+              <v-btn text to="/results"><v-row align="center" justify="center" ma-0>
+                  <v-img
+                    max-height="100"
+                    max-width="100"
+                    src="../assets/img/lab_art/pngs/placa.png"
+                  >
+                    Finalizar
                   </v-img>
                 </v-row>
               </v-btn>

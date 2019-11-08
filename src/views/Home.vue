@@ -71,14 +71,14 @@
               </v-img>
             </v-row>
             <v-card-title>
-              <v-btn text @click="generateSentence">
+              <v-btn text to="/help">
                 <v-row align="center" justify="center" ma-0>
                   <v-img
                     max-height="400"
                     max-width="120"
                     src="../assets/img/lab_art/pngs/placa.png"
                   >
-                    RESULTADOS
+                    Ajuda
                   </v-img>
                 </v-row>
               </v-btn>
@@ -90,13 +90,31 @@
             >
             </v-img>
             <v-card-title>
-              <v-btn text><v-row align="center" justify="center" ma-0>
+              <v-btn @click="sair"><v-row align="center" justify="center" ma-0>
                   <v-img
                     max-height="400"
                     max-width="120"
                     src="../assets/img/lab_art/pngs/placa.png"
                   >
                     SAIR
+                  </v-img>
+                </v-row>
+              </v-btn>
+            </v-card-title>
+          </v-card>
+          <v-card flat class="background-home" max-height="400" max-width="110">
+            <v-img
+              src="../assets/img/lab_art/pngs/potion3.png"
+            >
+            </v-img>
+            <v-card-title>
+              <v-btn text to="/credits"><v-row align="center" justify="center" ma-0>
+                  <v-img
+                    max-height="400"
+                    max-width="120"
+                    src="../assets/img/lab_art/pngs/placa.png"
+                  >
+                    Créditos
                   </v-img>
                 </v-row>
               </v-btn>
@@ -126,6 +144,9 @@ export default {
         .catch((error) => {
           console.log(error)
         })
+    },
+    sair () {
+      open(location, '_self').close()
     }
   }
 }

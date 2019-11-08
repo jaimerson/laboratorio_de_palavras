@@ -39,7 +39,7 @@ export default class SentenceRepository {
     this.loaded = true
     return this.sentences
   }
-  private static readonly filePath = 'config/sentences.yml'
+  private static readonly filePath = './config/sentences.yml'
   private static loaded: boolean = false
   private static sentences: Array<Sentence>
 }
