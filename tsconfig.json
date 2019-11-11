@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "target": "es2017",
+    "module": "commonjs",
     "strict": true,
     "jsx": "preserve",
     "importHelpers": true,
@@ -12,7 +12,9 @@
     "baseUrl": ".",
     "types": [
       "webpack-env",
-      "vuetify"
+      "vuetify",
+      "jasmine",
+      "node"
     ],
     "paths": {
       "@/*": [
@@ -20,12 +22,17 @@
       ]
     },
     "lib": [
-      "esnext",
+      "es2017",
+      "es2017.object",
       "dom",
       "dom.iterable",
       "scripthost"
     ]
   },
+  "typeRoots": [
+    "node_modules/@types",
+    "node_modules/@types/node"
+  ],
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",

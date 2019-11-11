@@ -1,5 +1,5 @@
-import { Sentence } from "../app/model/sentence";
-import SentenceRepository from "../app/repositories/sentence_repository";
+import { Sentence } from "../src/model/sentence";
+import SentenceRepository from "../src/repositories/sentence_repository";
 
 describe("Sentence loading to Result", () => {
     beforeAll(() => {
