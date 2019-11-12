@@ -30,8 +30,7 @@ jobs:
           yarn install
       - name: Publish
         run: |
-          yarn run build
-          yarn run dist
+          yarn electron:build
       - name: Cleanup artifacts
         run: |
           yarn run dist:cleanfolder
