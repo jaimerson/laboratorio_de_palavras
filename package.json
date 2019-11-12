@@ -20,21 +20,6 @@
     "watch": "gulp watch",
     "web": "yarn run build:web"
   },
-  "build": {
-    "appId": "br.com.labdepalavras",
-    "asar": false,
-    "mac": {
-      "category": "public.app-category.education"
-    },
-    "files": [
-      "./dist/**/*",
-      "./build/**/*"
-    ],
-    "directories": {
-      "buildResources": "assets"
-    },
-    "extends": null
-  },
   "keywords": [
     "palavras",
     "laboratorio",
@@ -85,7 +70,7 @@
     "ts-node": "^8.4.1",
     "tslint": "^5.13.1",
     "tslint-eslint-rules": "^5.4.0",
-    "typescript": "^3.6.4",
+    "typescript": "^3.5.4",
     "vue-cli-plugin-electron-builder": "^1.4.0",
     "vue-cli-plugin-vuetify": "^1.1.1",
     "vue-template-compiler": "^2.6.10",
@@ -103,7 +88,16 @@
       "plugin:vue/essential",
       "@vue/standard"
     ],
-    "rules": {},
+    "rules": {
+      "no-unused-vars": [
+        "error",
+        {
+          "vars": "local",
+          "args": "none",
+          "varsIgnorePattern": "[rR]esult"
+        }
+      ]
+    },
     "parserOptions": {
       "parser": "@typescript-eslint/parser"
     }
