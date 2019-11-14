@@ -5,7 +5,7 @@
         <v-layout  class="justify-center">
           <v-card flat class="background-home">
             <v-img
-              src="../assets/img/lab_art/pngs/quadro.png"
+              src="../../assets/quadro.png"
               max-height="600"
               max-width="800"
               >
@@ -37,7 +37,7 @@
                   <v-img
                     max-height="400"
                     max-width="100"
-                    src="../assets/img/lab_art/pngs/placa.png"
+                    src="../../assets/placa.png"
                   >
                     Voltar
                   </v-img>
@@ -52,7 +52,7 @@
                   <v-img
                     max-height="400"
                     max-width="100"
-                    src="../assets/img/lab_art/pngs/placa.png"
+                    src="../../assets/placa.png"
                   >
                     Limpar
                   </v-img>
@@ -67,7 +67,7 @@
                   <v-img
                     max-height="400"
                     max-width="100"
-                    src="../assets/img/lab_art/pngs/placa.png"
+                    src="../../assets/placa.png"
                   >
                     {{opcao1}}
                   </v-img>
@@ -81,7 +81,7 @@
                   <v-img
                     max-height="100"
                     max-width="100"
-                    src="../assets/img/lab_art/pngs/placa.png"
+                    src="../../assets/placa.png"
                   >
                     {{opcao2}}
                   </v-img>
@@ -95,7 +95,7 @@
                   <v-img
                     max-height="100"
                     max-width="100"
-                    src="../assets/img/lab_art/pngs/placa.png"
+                    src="../../assets/placa.png"
                   >
                     Finalizar
                   </v-img>
