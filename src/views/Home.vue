@@ -4,14 +4,14 @@
       <v-flex xs5 offset-xs1>
         <div>
           <v-img
-            src="../assets/img/lab_art/pngs/prateleira.png"
+            src="../../assets/prateleira.png"
             height="100"
             width="300"
             ma-5
             >
           </v-img>
           <v-img
-            src="../assets/img/lab_art/pngs/clara.png"
+            src="../../assets/clara.png"
             max-width="400"
             class=""
             >
@@ -22,7 +22,7 @@
         <v-layout class="justify-center">
           <v-card flat class="background-home">
             <v-img
-              src="../assets/img/lab_art/pngs/quadro.png"
+              src="../../assets/quadro.png"
               max-height="500"
               max-width="600"
               >
@@ -32,7 +32,7 @@
                 class="fill-height ma-0"
                 >
                 <v-img
-                  src="../assets/img/lab_art/pngs/logo.png"
+                  src="../../assets/logo.png"
                   pa-5
                   max-height="100"
                   max-width="250"
@@ -45,7 +45,7 @@
         <v-layout align="center" class="justify-space-around" ma-5 pa-5>
           <v-card flat class="background-home" max-height="400" max-width="100">
             <v-img
-              src="../assets/img/lab_art/pngs/pot1.png"
+              src="../../assets/pot1.png"
             >
             </v-img>
             <v-card-title>
@@ -53,7 +53,7 @@
                 <v-img
                   max-height="400"
                   max-width="120"
-                  src="../assets/img/lab_art/pngs/placa.png"
+                  src="../../assets/placa.png"
                 >
                   Iniciar
                 </v-img>
@@ -66,7 +66,7 @@
               <v-img
                 max-height="400"
                 max-width="53"
-                src="../assets/img/lab_art/pngs/potion2.png"
+                src="../../assets/potion2.png"
               >
               </v-img>
             </v-row>
@@ -76,7 +76,7 @@
                   <v-img
                     max-height="400"
                     max-width="120"
-                    src="../assets/img/lab_art/pngs/placa.png"
+                    src="../../assets/placa.png"
                   >
                     Ajuda
                   </v-img>
@@ -86,7 +86,7 @@
           </v-card>
           <v-card flat class="background-home" max-height="400" max-width="110">
             <v-img
-              src="../assets/img/lab_art/pngs/potion3.png"
+              src="../../assets/placa.png"
             >
             </v-img>
             <v-card-title>
@@ -94,7 +94,7 @@
                   <v-img
                     max-height="400"
                     max-width="120"
-                    src="../assets/img/lab_art/pngs/placa.png"
+                    src="../../assets/placa.png"
                   >
                     SAIR
                   </v-img>
@@ -104,7 +104,7 @@
           </v-card>
           <v-card flat class="background-home" max-height="400" max-width="110">
             <v-img
-              src="../assets/img/lab_art/pngs/potion3.png"
+              src="../../assets/potion3.png"
             >
             </v-img>
             <v-card-title>
@@ -112,7 +112,7 @@
                   <v-img
                     max-height="400"
                     max-width="120"
-                    src="../assets/img/lab_art/pngs/placa.png"
+                    src="../../assets/placa.png"
                   >
                     Créditos
                   </v-img>
