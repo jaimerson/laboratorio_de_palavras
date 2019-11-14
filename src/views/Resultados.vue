@@ -4,6 +4,7 @@
       <v-row align="center" justify="center">
         <v-layout  class="justify-center">
           <v-card flat class="background-home">
+                    {{text}}
             <v-img
               src="../../assets/quadro.png"
               max-height="600"
@@ -20,6 +21,7 @@
                   </v-card-title>
                   <v-img :src="image" />
                   <v-card-text class="display-1">
+                    {{comment}}
                   </v-card-text>
               </v-row>
             </v-img>
@@ -41,8 +43,12 @@ export default {
     return {
       text: result.title,
       comment: result.comment,
-      image: `/assets/results/${result.imagePath}`
+      path: '',
+      image: require(`../../assets/results/${this.path}`)
     }
+  },
+  beforeCreate () {
+    this.path = result.imagePath
   }
 }
 </script>
