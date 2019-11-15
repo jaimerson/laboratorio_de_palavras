@@ -136,7 +136,6 @@ export default {
   },
   methods: {
     generateSentence () {
-      console.log('call randomSentence')
       this.$store.dispatch('randomSentence')
         .then(() => {
           this.$router.push('/game')

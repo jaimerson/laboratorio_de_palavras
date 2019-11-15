@@ -9,3 +9,15 @@
     </v-btn>
   </div>
 </template>
+<script>
+export default {
+  data () {
+    return {
+      result: null
+    }
+  },
+  beforeMount () {
+    this.result = this.$store.getters.result
+  }
+}
+</script>

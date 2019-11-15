@@ -30,15 +30,12 @@
       </v-row>
     </v-layout>
     <v-layout class="center" ma-5 pa-5 flex wrap justify-center>
-      <v-flex v-for="value in values" :key="value" xs2>
-        <v-btn rounded @click="setValue(value)" :disabled="!disabled" color="cyan lighten-4">
-          {{value}}
-        </v-btn>
-      </v-flex>
+      <v-btn v-for='value in values' :key='value' rounded @click="setValue(value)" :disabled="!disabled" color="cyan lighten-4" class='mr-2' v-html="value">
+      </v-btn>
     </v-layout>
     <v-layout flex wrap justify-start>
       <v-btn rounded to="/" color="red lighten-3" class="mr-1">
-        Voltar
+        Menu
       </v-btn>
       <v-btn rounded @click="reset" color="red lighten-3" class="mr-1">
         Limpar
@@ -81,6 +78,12 @@ export default {
     },
     next () {
       this.$store.dispatch('result', this.base)
+        .then(() => {
+          this.$router.push('/results')
+        })
+        .catch((error) => {
+          console.log(error)
+        })
     }
   },
   beforeMount () {
