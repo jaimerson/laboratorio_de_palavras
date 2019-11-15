@@ -31,6 +31,11 @@ export class Sentence {
     throw new MalformedSentence(`Undefined result for "${resultStr}"`)
   }
 
+  public result (base: string): Result {
+    const result = this.results[base]
+    return result
+  }
+
   private runValidations (base: string, values: string[], results: { [a: string]: any }) {
     const numberOfPlaceholders: number = (base.match(/{}/g) || []).length
 

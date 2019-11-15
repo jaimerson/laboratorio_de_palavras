@@ -5,7 +5,7 @@
         <v-layout  class="justify-center">
           <v-card flat class="background-home">
             <v-img
-              src="../assets/img/lab_art/pngs/quadro.png"
+              :src="imagePath"
               max-height="600"
               max-width="800"
               >
@@ -19,7 +19,9 @@
                     {{fraseInicio}}
                   </v-card-title>
                   <v-card-text class="display-1">
-                    <div class="px-5 mx-5">O <strong><u>{{msg !== '' ? msg : space}}</u></strong> TOMA O <strong><u>{{msg2 !== '' ? msg2 : space}}</u></strong></div>
+                    <div class="px-5 mx-5">
+                      {{base}}
+                    </div>
                   </v-card-text>
               </v-row>
             </v-img>
@@ -27,84 +29,23 @@
         </v-layout>
       </v-row>
     </v-layout>
-    <v-layout>
-      <v-row>
-        <v-layout align="center" class="center" ma-5 pa-5>
-          <v-card flat class="background-home" max-height="400" max-width="100">
-            <v-card-title>
-              <v-btn text to="/">
-                <v-row align="center" justify="center" ma-0>
-                  <v-img
-                    max-height="400"
-                    max-width="100"
-                    src="../assets/img/lab_art/pngs/placa.png"
-                  >
-                    Voltar
-                  </v-img>
-              </v-row>
-            </v-btn>
-            </v-card-title>
-          </v-card>
-          <v-card flat class="background-home" max-height="400" max-width="100">
-            <v-card-title>
-              <v-btn text @click="msg=''; msg2=''">
-                <v-row align="center" justify="center" ma-0>
-                  <v-img
-                    max-height="400"
-                    max-width="100"
-                    src="../assets/img/lab_art/pngs/placa.png"
-                  >
-                    Limpar
-                  </v-img>
-              </v-row>
-            </v-btn>
-            </v-card-title>
-          </v-card>
-          <v-card flat class="background-home" max-height="50" max-width="100">
-            <v-card-title>
-              <v-btn text @click="test">
-                <v-row align="center" justify="center" ma-0>
-                  <v-img
-                    max-height="400"
-                    max-width="100"
-                    src="../assets/img/lab_art/pngs/placa.png"
-                  >
-                    {{opcao1}}
-                  </v-img>
-                </v-row>
-              </v-btn>
-            </v-card-title>
-          </v-card>
-          <v-card flat class="background-home" max-height="50" max-width="100">
-            <v-card-title>
-              <v-btn text @click="test2"><v-row align="center" justify="center" ma-0>
-                  <v-img
-                    max-height="100"
-                    max-width="100"
-                    src="../assets/img/lab_art/pngs/placa.png"
-                  >
-                    {{opcao2}}
-                  </v-img>
-                </v-row>
-              </v-btn>
-            </v-card-title>
-          </v-card>
-          <v-card flat class="background-home" max-height="50" max-width="100">
-            <v-card-title>
-              <v-btn text to="/results"><v-row align="center" justify="center" ma-0>
-                  <v-img
-                    max-height="100"
-                    max-width="100"
-                    src="../assets/img/lab_art/pngs/placa.png"
-                  >
-                    Finalizar
-                  </v-img>
-                </v-row>
-              </v-btn>
-            </v-card-title>
-          </v-card>
-        </v-layout>
-      </v-row>
+    <v-layout class="center" ma-5 pa-5 flex wrap justify-center>
+      <v-flex v-for="value in values" :key="value" xs2>
+        <v-btn rounded @click="setValue(value)" :disabled="!disabled" color="cyan lighten-4">
+          {{value}}
+        </v-btn>
+      </v-flex>
+    </v-layout>
+    <v-layout flex wrap justify-start>
+      <v-btn rounded to="/" color="red lighten-3" class="mr-1">
+        Voltar
+      </v-btn>
+      <v-btn rounded @click="reset" color="red lighten-3" class="mr-1">
+        Limpar
+      </v-btn>
+      <v-btn rounded @click="next" :disabled="disabled" color="cyan lighten-4" class="mr-1">
+        Avançar
+      </v-btn>
     </v-layout>
   </v-container>
 </template>
@@ -112,33 +53,38 @@
 <script>
 export default {
   name: 'game',
+  computed: {
+    sentence () {
+      return this.$store.getters.sentence
+    },
+    values () {
+      return this.$store.getters.values
+    }
+  },
   data () {
     return {
       fraseInicio: 'MONTE A FRASE:',
-      opcao1: 'MENINO',
-      opcao2: 'SORVETE',
-      resp1: 'MENINO',
-      resp2: 'SORVETE',
-      msg: '',
-      msg2: '',
-      space: '______'
+      base: '',
+      space: '______',
+      imagePath: require('../../assets/quadro.png'),
+      disabled: true
     }
   },
   methods: {
-    test () {
-      if (this.msg === '') {
-        this.msg = this.opcao1
-      } else if (this.msg2 === '') {
-        this.msg2 = this.opcao1
-      }
+    setValue (value) {
+      this.base = this.base.replace(/{}/i, value)
+      this.disabled = this.base.search(/{}/) !== -1
     },
-    test2 () {
-      if (this.msg === '') {
-        this.msg = this.opcao2
-      } else if (this.msg2 === '') {
-        this.msg2 = this.opcao2
-      }
+    reset () {
+      this.base = this.sentence.base
+      this.disabled = true
+    },
+    next () {
+      this.$store.dispatch('result', this.base)
     }
+  },
+  beforeMount () {
+    this.base = this.$store.getters.base
   }
 }
 </script>
