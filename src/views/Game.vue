@@ -30,7 +30,7 @@
       </v-row>
     </v-layout>
     <v-layout class="center" ma-5 pa-5 flex wrap justify-center>
-      <v-btn v-for='value in values' :key='value' rounded @click="setValue(value)" :disabled="!disabled" color="cyan lighten-4" class='mr-2' v-html="value">
+      <v-btn v-for='value in availableValues' :key='value' rounded @click="setValue(value)" :disabled="disabled(value)" color="cyan lighten-4" class='mr-2' v-html="value">
       </v-btn>
     </v-layout>
     <v-layout flex wrap justify-start>
@@ -40,7 +40,7 @@
       <v-btn rounded @click="reset" color="red lighten-3" class="mr-1">
         Limpar
       </v-btn>
-      <v-btn rounded @click="next" :disabled="disabled" color="cyan lighten-4" class="mr-1">
+      <v-btn rounded @click="next" :disabled="!sentenceComplete" color="cyan lighten-4" class="mr-1">
         Avançar
       </v-btn>
     </v-layout>
@@ -54,8 +54,12 @@ export default {
     sentence () {
       return this.$store.getters.sentence
     },
-    values () {
-      return this.$store.getters.values
+    availableValues () {
+      return this.$store.getters.availableValues
+    },
+    sentenceComplete () {
+      console.log(this.sentence.values.length == this.selectedValues.length)
+      return this.sentence.values.length == this.selectedValues.length
     }
   },
   data () {
@@ -64,26 +68,29 @@ export default {
       base: '',
       space: '______',
       imagePath: require('../../assets/quadro.png'),
-      disabled: true
+      selectedValues: []
     }
   },
   methods: {
     setValue (value) {
-      this.base = this.base.replace(/{}/i, value)
-      this.disabled = this.base.search(/{}/) !== -1
+      this.selectedValues.push(value)
+      this.base = this.sentence.withValues(this.selectedValues)
     },
     reset () {
-      this.base = this.sentence.base
-      this.disabled = true
+      this.base = this.sentence.withValues([])
+      this.selectedValues = []
     },
     next () {
-      this.$store.dispatch('result', this.base)
+      this.$store.dispatch('result', this.selectedValues)
         .then(() => {
           this.$router.push('/results')
         })
         .catch((error) => {
           console.log(error)
         })
+    },
+    disabled (value) {
+      return this.selectedValues.includes(value)
     }
   },
   beforeMount () {

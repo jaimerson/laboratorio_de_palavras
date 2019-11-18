@@ -4,7 +4,7 @@ import { Result } from './result'
 
 export class Sentence {
   public base: string;
-  private values: string[];
+  public values: string[];
   private results: { [id: string]: Result };
 
   constructor (base: string, values: string[], results: { [id: string]: Result }) {
@@ -15,12 +15,22 @@ export class Sentence {
     this.results = results
   }
 
-  public resultFor (values: string[]): Result {
+  public withValues(values: string[], placeholder : string = '_') : string {
     let resultStr: string = this.base
 
     values.forEach((v) => {
       resultStr = resultStr.replace(/{}/, v)
     })
+
+    if(this.numberOfPlaceholders(resultStr) > 0){
+      resultStr = resultStr.replace(/{}/g, placeholder.repeat(Math.max(...this.values.map(x => x.length))))
+    }
+
+    return resultStr
+  }
+
+  public resultFor (values: string[]): Result {
+    let resultStr: string = this.withValues(values)
 
     const result = this.results[resultStr]
 
@@ -31,13 +41,12 @@ export class Sentence {
     throw new MalformedSentence(`Undefined result for "${resultStr}"`)
   }
 
-  public result (base: string): Result {
-    const result = this.results[base]
-    return result
+  private numberOfPlaceholders (base : string = this.base) : number {
+    return (base.match(/{}/g) || []).length
   }
 
   private runValidations (base: string, values: string[], results: { [a: string]: any }) {
-    const numberOfPlaceholders: number = (base.match(/{}/g) || []).length
+    const numberOfPlaceholders = this.numberOfPlaceholders(base)
 
     if (numberOfPlaceholders < 2) {
       throw new SentenceNotValid('Must have at least two placeholders.')

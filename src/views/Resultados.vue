@@ -29,29 +29,42 @@
         </v-layout>
       </v-row>
     </v-layout>
+    <v-layout flex wrap justify-start>
+      <v-btn rounded to="/" color="red lighten-3" class="mr-1">
+        Menu
+      </v-btn>
+      <v-btn rounded to="/game" color="red lighten-3" class="mr-1">
+        Voltar
+      </v-btn>
+      <v-btn rounded color="cyan lighten-4" class="mr-1" @click="next">
+        Avançar
+      </v-btn>
+    </v-layout>
   </v-container>
 </template>
 <script>
-import SentenceRepository from '../repositories/sentence_repository'
-import { relativeAssetPath } from '../utils/asset_helper'
-
-const sentence = SentenceRepository.randomSentence()
-const result = sentence.resultFor(sentence.values)
-
 export default {
   data () {
     return {
-      text: result.title,
-      comment: result.comment,
-      path: '',
-      image: require(`../../assets/results/${this.path}`)
+      text: '',
+      comment: '',
+      image: '',
+      result: null
     }
-  },
-  beforeCreate () {
-    this.path = result.imagePath
   },
   beforeMount () {
     this.result = this.$store.getters.result
+    this.text = this.result.title
+    this.comment = this.result.comment
+    this.image = require(`../../assets/results/${this.result.imagePath}`)
+  },
+  methods: {
+    next () {
+      this.$store.dispatch('randomSentence')
+        .then(() => {
+          this.$router.push('/game')
+        })
+    }
   }
 }
 </script>

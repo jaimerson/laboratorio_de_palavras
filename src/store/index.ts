@@ -10,23 +10,23 @@ export default new Vuex.Store({
     sentence: SentenceRepository.randomSentence(),
     base: '',
     result: Result,
-    values: []
+    availableValues: []
   },
   actions: {
     randomSentence (context) {
       var sentence = SentenceRepository.randomSentence()
       context.commit('changeSentence', sentence)
     },
-    result (context, base) {
-      let result: Result = context.state.sentence.result(base)
+    result (context, values) {
+      let result: Result = context.state.sentence.resultFor(values)
       context.commit('changeResult', result)
     }
   },
   mutations: {
     changeSentence (state, sentence) {
       state.sentence = sentence
-      state.base = sentence.base
-      state.values = sentence.values
+      state.availableValues = sentence.values
+      state.base = sentence.withValues([])
     },
     changeResult (state, result) {
       state.result = result
@@ -42,8 +42,8 @@ export default new Vuex.Store({
     result: state => {
       return state.result
     },
-    values: state => {
-      return state.values
+    availableValues: state => {
+      return state.availableValues
     }
   },
   modules: {
