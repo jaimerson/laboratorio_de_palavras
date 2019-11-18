@@ -11,7 +11,8 @@
             >
           </v-img>
           <v-img
-            src="../../assets//clara.png"
+            src="../../assets/clara.png"
+
             max-width="400"
             class=""
             >
@@ -32,7 +33,8 @@
                 class="fill-height ma-0"
                 >
                 <v-img
-                  src="../../assets//logo.png"
+                  src="../../assets/logo.png"
+
                   pa-5
                   max-height="100"
                   max-width="250"
@@ -45,7 +47,8 @@
         <v-layout align="center" class="justify-space-around" ma-5 pa-5>
           <v-card flat class="background-home" max-height="400" max-width="100">
             <v-img
-              src="../../assets//pot1.png"
+              src="../../assets/pot1.png"
+
             >
             </v-img>
             <v-card-title>
@@ -53,7 +56,7 @@
                 <v-img
                   max-height="400"
                   max-width="120"
-                  src="../../assets//placa.png"
+                  src="../../assets/placa.png"
                 >
                   Iniciar
                 </v-img>
@@ -66,7 +69,7 @@
               <v-img
                 max-height="400"
                 max-width="53"
-                src="../../assets//potion2.png"
+                src="../../assets/potion2.png"
               >
               </v-img>
             </v-row>
@@ -76,7 +79,7 @@
                   <v-img
                     max-height="400"
                     max-width="120"
-                    src="../../assets//placa.png"
+                    src="../../assets/placa.png"
                   >
                     Ajuda
                   </v-img>
@@ -86,7 +89,7 @@
           </v-card>
           <v-card flat class="background-home" max-height="400" max-width="110">
             <v-img
-              src="../../assets//potion3.png"
+              src="../../assets/potion3.png"
             >
             </v-img>
             <v-card-title>
@@ -94,7 +97,7 @@
                   <v-img
                     max-height="400"
                     max-width="120"
-                    src="../../assets//placa.png"
+                    src="../../assets/placa.png"
                   >
                     SAIR
                   </v-img>
@@ -104,7 +107,7 @@
           </v-card>
           <v-card flat class="background-home" max-height="400" max-width="110">
             <v-img
-              src="../../assets//potion3.png"
+              src="../../assets/potion3.png"
             >
             </v-img>
             <v-card-title>
@@ -112,7 +115,7 @@
                   <v-img
                     max-height="400"
                     max-width="120"
-                    src="../../assets//placa.png"
+                    src="../../assets/placa.png"
                   >
                     Créditos
                   </v-img>

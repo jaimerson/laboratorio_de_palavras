@@ -3,14 +3,11 @@
   "version": "1.0.5",
   "private": true,
   "scripts": {
-    "auto-lint": "node_modules/tslint/bin/tslint --fix ./src/**/*.ts -c ./tsconfig.json",
     "build": "vue-cli-service build",
     "dist": "electron-builder",
     "dist:cleanfolder": "gulp dist:cleanfolder",
     "electron:build": "vue-cli-service electron:build",
     "electron:serve": "vue-cli-service electron:serve",
-    "lint": "vue-cli-service lint",
-    "lint:gulp": "gulp lint",
     "pack": "electron-builder --dir",
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps",
@@ -43,21 +40,15 @@
     "@types/jasmine": "^3.4.4",
     "@types/node": "^11.11.3",
     "@vue/cli-plugin-babel": "^4.0.0",
-    "@vue/cli-plugin-eslint": "^4.0.0",
     "@vue/cli-plugin-typescript": "^4.0.0",
     "@vue/cli-service": "^4.0.0",
-    "@vue/eslint-config-standard": "^4.0.0",
-    "@vue/eslint-config-typescript": "^4.0.0",
     "del": "^4.0.0",
     "del-cli": "^3.0.0",
     "electron": "^6.0.0",
     "electron-builder": "^22.1.0",
     "electron-reload": "^1.5.0",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
     "gulp": "^4.0.0",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-tslint": "^8.1.4",
     "gulp-typescript": "^5.0.0",
     "gulp-watch": "^5.0.1",
     "jasmine": "^3.5.0",
@@ -68,8 +59,6 @@
     "sass-loader": "^8.0.0",
     "ts-loader": "^5.3.3",
     "ts-node": "^8.4.1",
-    "tslint": "^5.13.1",
-    "tslint-eslint-rules": "^5.4.0",
     "typescript": "^3.5.4",
     "vue-cli-plugin-electron-builder": "^1.4.0",
     "vue-cli-plugin-vuetify": "^1.1.1",
@@ -78,29 +67,6 @@
     "webpack": "^4.29.6",
     "webpack-node-externals": "^1.7.2",
     "webpack-stream": "^5.2.1"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "@vue/standard"
-    ],
-    "rules": {
-      "no-unused-vars": [
-        "error",
-        {
-          "vars": "local",
-          "args": "none",
-          "varsIgnorePattern": "[rR]esult"
-        }
-      ]
-    },
-    "parserOptions": {
-      "parser": "@typescript-eslint/parser"
-    }
   },
   "postcss": {
     "plugins": {
