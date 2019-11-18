@@ -1,60 +1,55 @@
-- type: nouns
-  base: O {} toma o {}
+- base: O {} toma o {}
   values:
     - menino
     - sorvete
   results:
     - title: 'O menino toma o sorvete'
-      imagePath: '../assets/results/meninosorerve.png'
+      imagePath: 'meninosorvete.png'
       comment: 'O menino toma o sorvete pelo calor que está fazendo na praia'
     - title: 'O sorvete toma o menino'
-      imagePath: ../assets/results/sorvetemenino.png'
+      imagePath: 'sorvetemenino.png'
       comment: 'O sorvete tomou o menino'
-- type: nouns
-  base: '{} foi no {}'
+- base: '{} foi no {}'
   values:
     - João
     - carro
   results:
     - title: 'João foi no carro'
-      imagePath: '../assets/results/carrojose1.png'
+      imagePath: 'carrojose1.png'
       comment: 'João foi no carro para o jogo de futebol'
     - title: 'Carro foi no João'
-      imagePath: ../assets/results/josecarro2.png'
+      imagePath: 'carrojose2.png'
       comment: 'O carro foi dentro de joão'
-- type: nouns
-  base: A {} jogou a {}
+- base: A {} jogou a {}
   values:
     - pessoa
     - bola
   results:
     - title: 'A pessoa jogou a bola'
-      imagePath: '../assets/results/meninobola.png'
+      imagePath: 'meninobola.png'
       comment: 'A pessoa jogou a bola na cesta'
     - title: 'A bola jogou a pessoa'
-      imagePath: ../assets/results/bolamenino.png'
+      imagePath: 'bolamenino.png'
       comment: 'A bola jogou a pessoa fora'
-- type: nouns
-  base: A {} viu a {}
+- base: A {} viu a {}
   values:
     - menina
     - cadeira
   results:
     - title: 'A menina viu a cadeira'
-      imagePath: '../assets/results/meninacadeira.png'
+      imagePath: 'meninacadeira.png'
       comment: 'A menina viu a cadeira se mexer'
     - title: 'A cadeira viu a menina'
-      imagePath: ../assets/results/cadeiramenina.png'
+      imagePath: 'cadeiramenina.png'
       comment: 'A cadeira viu a menina brincar'
-- type: nouns
-  base: O {} está no {}
+- base: O {} está no {}
   values:
     - barco
     - mar
   results:
     - title: 'O barco está no mar'
-      imagePath: '../assets/results/barcomar.png'
+      imagePath: 'barcomar.png'
       comment: 'O barco está no mar sem rumo'
     - title: 'O mar navega no barco'
-      imagePath: ../assets/results/marbarco.png'
+      imagePath: 'marbarco.png'
       comment: 'O mar navega no barco para a costa'
