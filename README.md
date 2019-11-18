@@ -7,7 +7,7 @@ yarn install
 
 ### Compiles and hot-reloads for development
 ```
-yarnelectron:serve
+yarn electron:serve
 ```
 
 ### Run your tests
