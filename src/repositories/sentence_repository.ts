@@ -4,6 +4,8 @@ import { Result } from '../model/result'
 import { Sentence } from '../model/sentence'
 
 export default class SentenceRepository {
+  private static sentencesPlayed : Array<Sentence> = []
+
   public static getSentence (): Sentence {
     let base = 'O {} correu atrás do {}'
     let values = ['menino', 'cachorro']
@@ -15,7 +17,18 @@ export default class SentenceRepository {
     if (!this.loaded) {
       this.loadFromFile()
     }
-    return this.sentences[Math.floor(Math.random() * this.sentences.length)]
+    let sentence = this.sentences[Math.floor(Math.random() * this.sentences.length)]
+    if(!this.sentencesPlayed.includes(sentence)){
+      this.sentencesPlayed.push(sentence)
+
+      if(this.sentencesPlayed.length == this.sentences.length){
+        this.sentencesPlayed = []
+      }
+
+      return sentence
+    } else {
+      return this.randomSentence()
+    }
   }
 
   public static getSentences (): Array<Sentence> {

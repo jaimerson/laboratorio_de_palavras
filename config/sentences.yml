@@ -12,9 +12,9 @@
 - base: '{} foi no {}'
   values:
     - João
-    - carro
+    - Carro
   results:
-    - title: 'João foi no carro'
+    - title: 'João foi no Carro'
       imagePath: 'carrojose1.png'
       comment: 'João foi no carro para o jogo de futebol'
     - title: 'Carro foi no João'
@@ -50,6 +50,6 @@
     - title: 'O barco está no mar'
       imagePath: 'barcomar.png'
       comment: 'O barco está no mar sem rumo'
-    - title: 'O mar navega no barco'
+    - title: 'O mar está no barco'
       imagePath: 'marbarco.png'
       comment: 'O mar navega no barco para a costa'

@@ -12,7 +12,6 @@
           </v-img>
           <v-img
             src="../../assets/clara.png"
-
             max-width="400"
             class=""
             >
@@ -34,7 +33,6 @@
                 >
                 <v-img
                   src="../../assets/logo.png"
-
                   pa-5
                   max-height="100"
                   max-width="250"
@@ -48,11 +46,10 @@
           <v-card flat class="background-home" max-height="400" max-width="100">
             <v-img
               src="../../assets/pot1.png"
-
             >
             </v-img>
             <v-card-title>
-              <v-btn text to="/game"><v-row align="center" justify="center" ma-0>
+              <v-btn text @click="generateSentence"><v-row align="center" justify="center" ma-0>
                 <v-img
                   max-height="400"
                   max-width="120"
@@ -139,10 +136,9 @@ export default {
   },
   methods: {
     generateSentence () {
-      console.log('call randomSentence')
       this.$store.dispatch('randomSentence')
         .then(() => {
-          this.$router.go('/game')
+          this.$router.push('/game')
         })
         .catch((error) => {
           console.log(error)
