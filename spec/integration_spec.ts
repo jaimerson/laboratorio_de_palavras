@@ -2,10 +2,6 @@ import { Sentence } from "../src/model/sentence";
 import SentenceRepository from "../src/repositories/sentence_repository";
 
 describe("Sentence loading to Result", () => {
-    beforeAll(() => {
-        SentenceRepository.loadFromFile();
-    });
-
     it('loads sentences from yml file', () => {
         const result = SentenceRepository.getSentences();
         expect(result[0].base).toEqual("O {} toma o {}");
