@@ -27,13 +27,11 @@
   "license": "GPL-3.0",
   "main": "background.js",
   "dependencies": {
-    "@types/yaml": "^1.2.0",
     "core-js": "^3.3.2",
     "vue": "^2.6.10",
     "vue-router": "^3.1.3",
     "vuetify": "^2.1.0",
-    "vuex": "^3.0.1",
-    "yaml": "^1.7.2"
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@types/electron": "^1.6.10",
