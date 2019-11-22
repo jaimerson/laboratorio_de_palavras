@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
 /dist
+/build
 
 # local env files
 .env.local
@@ -24,3 +25,6 @@ yarn-error.log*
 /dist_electron
 
 package_copy.json
+
+#Copy Home.vue
+Home copy.vue

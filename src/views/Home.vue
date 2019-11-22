@@ -1,8 +1,49 @@
 <template>
   <v-container fluid class="background-home">
-    <v-layout>
+    <v-row>
+      <v-col cols="5" style="height:100%">
+          <v-row align="end" justify="start" class="ma-0" style="position:fixed;left:0">
+            <v-img
+              src="../../assets/prateleira.png"
+              
+            />
+          </v-row>
+          <v-row style="margin-top: -44px !important; margin-left:20px">
+              <v-img
+                src="../../assets/clara.png"
+                position="botton"
+                contain="true"
+                class=""
+                style="position:fixed;bottom:0;max-height:82%;width:100%;"
+              />
+          </v-row>
+        </v-col>
+        <v-col cols="7">
+          <v-row style="position:fixed;right:5%">
+            <v-card flat class="background-home">
+              <v-img
+                src="../../assets/quadro.png"
+                max-width="600"
+                max-height="500"
+                position="top"
+                contain="true"
+                />
+              <v-row
+                  align="center"
+                  justify="center"
+                  class="ma-1"
+                  >
+                    <v-card-title class="display-1 ma-0 text-center">
+                      {{text}}
+                    </v-card-title>
+              </v-row>
+            </v-card>
+          </v-row>
+        </v-col>
+    </v-row>
+    <!--
+    <v-layout class="justify-end">
       <v-flex xs5 offset-xs1>
-        <div>
           <v-img
             src="../../assets/prateleira.png"
             height="100"
@@ -13,10 +54,12 @@
           <v-img
             src="../../assets/clara.png"
             max-width="400"
+            max-height="500"
+            position="botton"
+            contain="true"
             class=""
             >
           </v-img>
-        </div>
       </v-flex>
       <v-flex xs5>
         <v-layout class="justify-center">
@@ -25,6 +68,8 @@
               src="../../assets/quadro.png"
               max-height="500"
               max-width="600"
+              height="250"
+              width="500"
               >
               <v-row
                 align="center"
@@ -123,6 +168,7 @@
         </v-layout>
       </v-flex>
     </v-layout>
+    -->
   </v-container>
 </template>
 
