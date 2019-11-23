@@ -17,29 +17,118 @@
                 style="position:fixed;bottom:0;max-height:82%;width:100%;"
               />
           </v-row>
-        </v-col>
-        <v-col cols="7">
-          <v-row style="position:fixed;right:5%">
-            <v-card flat class="background-home">
-              <v-img
-                src="../../assets/quadro.png"
-                max-width="600"
-                max-height="500"
-                position="top"
-                contain="true"
+      </v-col>
+      <v-col cols="7">
+        <v-row style="position:absolute;right:5%">
+          <v-card flat class="background-home">
+            <v-img
+              src="../../assets/quadro.png"
+              max-width="600"
+              max-height="500"
+              position="top"
+              contain="true"
+              />
+            <v-row
+              align="center"
+              justify="center"
+              class="ma-1"
+              style="position:absolute;top:10%;left:3%"
+            >
+              <v-card-title class="display-1 ma-0 text-center">
+                <!--{{text}}teste-->
+                <v-img
+                  src="../../assets/logo.png"
+                  max-width="600"
+                  max-height="500"
+                  position="top"
+                  contain="true"
                 />
-              <v-row
-                  align="center"
-                  justify="center"
-                  class="ma-1"
-                  >
-                    <v-card-title class="display-1 ma-0 text-center">
-                      {{text}}
-                    </v-card-title>
-              </v-row>
-            </v-card>
-          </v-row>
-        </v-col>
+              </v-card-title>
+            </v-row>
+          </v-card>
+        </v-row>
+        <v-row align="center" justify="center">
+          <v-img
+            src="../../assets/mesa.png"
+            position="botton"
+            contain="true"
+            class=""
+            style="position:fixed;bottom:0;margin-left:1%;max-height:100%;width:52%;"
+          />
+          <v-col style="margin-left:10%;">
+            <v-row align="center" justify="center" >
+              <v-img
+                src="../../assets/pot1.png"
+                position="botton"
+                contain="true"
+                class=""
+                style="position:fixed;bottom:4%;max-height:25%;width:10%;"
+              />
+            </v-row>
+            <v-row align="center" justify="center">
+              <v-card-title style="position:fixed;bottom:1%;max-height:100%;width:10%;">
+                <v-btn text @click="generateSentence">
+                  <v-row align="center" justify="center" ma-0 class="font-weight-bold;">
+                    <v-img                                            
+                      src="../../assets/placa.png"
+                    >
+                      Iniciar
+                    </v-img>
+                  </v-row>
+                </v-btn>
+              </v-card-title>
+            </v-row>
+          </v-col>
+          <v-col>
+            <v-row align="center" justify="center" >
+              <v-img
+                src="../../assets/potion2.png"
+                position="botton"
+                contain="true"
+                class=""
+                style="position:fixed;bottom:4%;max-height:25%;width:10%;"
+              />
+            </v-row>
+            <v-row align="center" justify="center" style="margin-left:-30%;">
+              <v-card-title style="position:fixed;bottom:1%;max-height:100%;width:10%;">
+                <v-btn text @click="generateSentence">
+                  <v-row align="center" justify="center" ma-0>
+                    <v-img                                            
+                      src="../../assets/placa.png"
+                    >
+                      Ajuda
+                    </v-img>
+                  </v-row>
+                </v-btn>
+              </v-card-title>
+            </v-row>
+          </v-col>
+          <v-col>
+            <v-row align="center" justify="center" style="margin-left:-50%;">
+              <v-img
+                src="../../assets/potion3.png"
+                position="botton"
+                contain="true"
+                class=""
+                style="position:fixed;bottom:4%;max-height:25%;width:10%;"
+              />
+            </v-row>
+            <v-row align="center" justify="center" style="margin-left:-50%;">
+              <v-card-title style="position:fixed;bottom:1%;max-height:100%;width:10%;">
+                <v-btn text @click="generateSentence">
+                  <v-row align="center" justify="center" ma-0>
+                    <v-img                                            
+                      src="../../assets/placa.png"
+                    >
+                      Sair
+                    </v-img>
+                  </v-row>
+                </v-btn>
+              </v-card-title>
+            </v-row>
+          </v-col>
+        </v-row>
+      </v-col>
     </v-row>
     <!--
     <v-layout class="justify-end">
