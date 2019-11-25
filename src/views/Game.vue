@@ -47,16 +47,40 @@
           </v-col>
         </v-row>
 
-        <v-row align="center" justify="center">
-          <v-btn rounded to="/" color="yellow lighten-3" class="mr-1">
-            Menu
-          </v-btn>
+        <v-row align="center" justify="space-around">
+          <v-card flat class="background-home" max-height="50" max-width="100">
+            <v-card-title>
+              <v-btn text to="/">
+                <v-row align="center" justify="center" ma-0>
+                  <v-img
+                    max-height="100"
+                    max-width="100"
+                    src="../../assets/arrow1.png"
+                    >
+                  </v-img>
+                </v-row>
+              </v-btn>
+            </v-card-title>
+          </v-card>
+
           <v-btn rounded @click="reset" color="red lighten-3" class="mr-1">
             Limpar
           </v-btn>
-          <v-btn rounded @click="next" :disabled="!sentenceComplete" color="yellow lighten-3" class="mr-1">
-        Avançar
-          </v-btn>
+
+          <v-card flat class="background-home" max-height="50" max-width="100">
+            <v-card-title>
+              <v-btn text @click="next" :disabled="!sentenceComplete" to="#">
+                <v-row align="center" justify="center" ma-0>
+                  <v-img
+                    max-height="100"
+                    max-width="100"
+                    src="../../assets/arrow2.png"
+                    >
+                  </v-img>
+                </v-row>
+              </v-btn>
+            </v-card-title>
+          </v-card>
         </v-row>
       </v-col>
     </v-row>
