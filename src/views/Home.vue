@@ -72,7 +72,7 @@
                     <v-img                                            
                       src="../../assets/placa.png"
                     >
-                      Iniciar
+                      <div style="margin-top:10px; margin-left: -10px;font-size:18pt"><b>Iniciar</b></div>
                     </v-img>
                   </v-row>
                 </v-btn>
@@ -96,7 +96,7 @@
                     <v-img                                            
                       src="../../assets/placa.png"
                     >
-                      Ajuda
+                      <div style="margin-top:10px; margin-left: -10px;font-size:18pt"><b>Ajuda</b></div>
                     </v-img>
                   </v-row>
                 </v-btn>
@@ -120,7 +120,7 @@
                     <v-img                                            
                       src="../../assets/placa.png"
                     >
-                      Sair
+                      <div style="margin-top:10px; margin-left: -10px;font-size:18pt"><b>Sair</b></div>
                     </v-img>
                   </v-row>
                 </v-btn>
