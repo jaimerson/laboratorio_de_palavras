@@ -7,7 +7,9 @@
           max-width="300"
           max-height="400"
           position="bottom"
-          contain="true"
+          contain
+	        align="end"
+          justify="end"
         />
       </v-col>
       <v-col cols="7">
@@ -17,7 +19,7 @@
               :src="imagePath"
               max-height="600"
               max-width="800"
-              contain="true"
+              contain
               >
               <v-row
                 align="center"
@@ -47,15 +49,18 @@
         </v-row>
 
         <v-row align="center" justify="space-around">
-          <v-card flat class="background-home" max-height="50" max-width="100">
+          <v-card flat class="background-home" max-height="100" max-width="100">
             <v-card-title>
               <v-btn text to="/">
                 <v-row align="center" justify="center" ma-0>
                   <v-img
                     max-height="100"
-                    max-width="100"
+                    max-width="120"
                     src="../../assets/arrow1.png"
                     >
+                    <v-card-title class="body-1">
+                      <p class="pa-0 ma-0 ml-5 mt-3">Voltar</p>
+                    </v-card-title>
                   </v-img>
                 </v-row>
               </v-btn>
@@ -66,15 +71,18 @@
             Limpar
           </v-btn>
 
-          <v-card flat class="background-home" max-height="50" max-width="100">
+          <v-card flat class="background-home" max-height="100" max-width="100">
             <v-card-title>
-              <v-btn text @click="next" :disabled="!sentenceComplete" :style="{ opacity: sentenceComplete ? initial : 0.5 }" to="#">
-                <v-row align="center" justify="center" ma-0>
+              <v-btn text @click="next" :disabled="!sentenceComplete" :style="{ opacity: sentenceComplete ? initial : 0.5 }" to="#">    
+                <v-row align="center" justify="center">
                   <v-img
                     max-height="100"
-                    max-width="100"
+                    max-width="120"
                     src="../../assets/arrow2.png"
                     >
+                  <v-card-title class="body-1">
+                    <p class="ma-0 mr-5 mt-3">Avançar</p>
+                  </v-card-title>
                   </v-img>
                 </v-row>
               </v-btn>
