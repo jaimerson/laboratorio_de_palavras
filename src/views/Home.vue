@@ -53,7 +53,7 @@
             position="botton"
             contain=true
             class=""
-            style="position:fixed;bottom:0;margin-left:1%;max-height:100%;width:52%;"
+            style="position:fixed;bottom:0;margin-left:1%;max-height:100%;width:55%;"
           />
           <v-col style="margin-left:10%;">
             <v-row align="center" justify="center" style="margin-left:27%">
