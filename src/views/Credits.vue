@@ -58,6 +58,11 @@
           <v-expansion-panel-content>Pedro de Paiva Barbosa Neto</v-expansion-panel-content>
           <v-expansion-panel-content>Péricles Gomes da Costa</v-expansion-panel-content>
         </v-expansion-panel>
+
+        <v-expansion-panel>
+          <v-expansion-panel-header class="font-weight-black">Licença</v-expansion-panel-header>
+          <v-expansion-panel-content>LGPL-3.0 (GNU Lesser General Public License v3.0)</v-expansion-panel-content>
+        </v-expansion-panel>
       </v-expansion-panels>
     </div>
   </div>
@@ -66,7 +71,7 @@
 export default {
   name: "credits",
   data: () => ({
-    panel: [0, 1, 2, 3, 4, 5, 6, 7],
+    panel: [0, 1, 2, 3, 4, 5, 6, 7, 8],
     disabled: false,
     readonly: false
   })
