@@ -11,7 +11,7 @@
         />
       </v-col>
       <v-col cols="7">
-        <v-row>
+        <v-row justify="center">
           <v-card flat class="background-home">
             <v-img
               :src="imagePath"
@@ -43,7 +43,6 @@
               <v-btn v-for='value in availableValues' :key='value' rounded @click="setValue(value)" :disabled="disabled(value)" color="cyan lighten-4" class='mr-2' v-html="value">
               </v-btn>
             </v-row>
-
           </v-col>
         </v-row>
 
