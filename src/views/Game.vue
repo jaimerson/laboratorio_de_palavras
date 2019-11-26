@@ -20,6 +20,7 @@
               max-height="600"
               max-width="800"
               contain
+              position="center bottom"
               >
               <v-row
                 align="center"
@@ -67,8 +68,12 @@
             </v-card-title>
           </v-card>
 
-          <v-btn rounded @click="reset" color="red lighten-3" class="mr-1">
+          <v-btn v-if="this.$route.name == 'game'" rounded @click="reset" color="red lighten-3" class="mr-1">
             Limpar
+          </v-btn>
+
+          <v-btn v-if="this.$route.name == 'results'" rounded @click="reset" color="red lighten-3" class="mr-1">
+            Menu
           </v-btn>
 
           <v-card flat class="background-home" max-height="100" max-width="100">
