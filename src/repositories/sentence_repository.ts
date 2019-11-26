@@ -79,7 +79,7 @@ export default class SentenceRepository {
         {
           "title": "Carro foi no João",
           "imagePath": "carrojose2.png",
-          "comment": "O carro foi dentro de joão"
+          "comment": "O carro foi nas costas de João"
         }
       ]
     },
@@ -98,7 +98,7 @@ export default class SentenceRepository {
         {
           "title": "A bola jogou a pessoa",
           "imagePath": "bolamenino.png",
-          "comment": "A bola jogou a pessoa fora"
+          "comment": "A bola jogou a pessoa na cesta"
         }
       ]
     },
@@ -136,7 +136,102 @@ export default class SentenceRepository {
         {
           "title": "O mar está no barco",
           "imagePath": "marbarco.png",
-          "comment": "O mar navega no barco para a costa"
+          "comment": "O mar navega no barco"
+        }
+      ]
+    },
+    {
+      "base": "A {} saiu com a {} nas costas",
+      "values": [
+        "Joaquina",
+        "bolsa"
+      ],
+      "results": [
+        {
+          "title": "A Joaquina saiu com a bolsa nas costas",
+          "imagePath": "meninabolsa.png",
+          "comment": "A Joaquina saiu com a bolsa nas costas para o colégio"
+        },
+        {
+          "title": "A bolsa saiu com a Joaquina nas costas",
+          "imagePath": "bolsamenina.png",
+          "comment": " A bolsa saiu com a joaquina nas costa, pois estava com pressa"
+        }
+      ]
+    },
+    {
+      "base": "O {} pegou o {}.",
+      "values": [
+        "menino",
+        "carrinho"
+      ],
+      "results": [
+        {
+          "title": "O menino pegou o carrinho.",
+          "imagePath": "meninocarrinho.png",
+          "comment": "O menino pegou o carrinho para brincar"
+        },
+        {
+          "title": "O carrinho pegou o menino.",
+          "imagePath": "carrinhomenino.png",
+          "comment": "O carrinho pegou o menino na parada de ônibus"
+        }
+      ]
+    },
+    {
+      "base": "{} passeiam no jardim carregando {}.",
+      "values": [
+        "formiguinhas",
+        "folhas"
+      ],
+      "results": [
+        {
+          "title": "formiguinhas passeiam no jardim carregando folhas.",
+          "imagePath": "formigas1.png",
+          "comment": "Formigas caminham no jardim carregando folhas em direção ao formigueiro."
+        },
+        {
+          "title": "folhas passeiam no jardim carregando formiguinhas.",
+          "imagePath": "formigas2.png",
+          "comment": "Folhas andam pelo jardim carregando formigas em direção a árvore."
+        }
+      ]
+    },
+    {
+      "base": "O {} mostrou o cartão vermelho ao {}.",
+      "values": [
+        "árbitro",
+        "jogador"
+      ],
+      "results": [
+        {
+          "title": "O árbitro mostrou o cartão vermelho ao jogador.",
+          "imagePath": "juizjogador.png",
+          "comment": "O árbitro aplicou um cartão vermelho no jogador pela ação cometida."
+        },
+        {
+          "title": "O jogador mostrou o cartão vermelho ao árbitro.",
+          "imagePath": "jogadorjuiz.png",
+          "comment": "O jogador mostrou o cartão vermelho para o árbitro, pois não gostou de ser chamado a atenção."
+        }
+      ]
+    },
+    {
+      "base": "O {} correu atrás do {}.",
+      "values": [
+        "cachorro",
+        "graveto"
+      ],
+      "results": [
+        {
+          "title": "O cachorro correu atrás do graveto.",
+          "imagePath": "cachorrovareta.png",
+          "comment": "O cachorro está correndo atrás do graveto."
+        },
+        {
+          "title": "O graveto correu atrás do cachorro.",
+          "imagePath": "varetacachorra.png",
+          "comment": "O graveto humanóide está correndo atrás do cachorro."
         }
       ]
     }
