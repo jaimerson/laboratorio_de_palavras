@@ -68,7 +68,7 @@
 
           <v-card flat class="background-home" max-height="50" max-width="100">
             <v-card-title>
-              <v-btn text @click="next" :disabled="!sentenceComplete" to="#">
+              <v-btn text @click="next" :disabled="!sentenceComplete" :style="{ opacity: sentenceComplete ? initial : 0.5 }" to="#">
                 <v-row align="center" justify="center" ma-0>
                   <v-img
                     max-height="100"
