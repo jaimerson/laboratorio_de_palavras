@@ -7,7 +7,7 @@
           max-width="300"
           max-height="400"
           position="bottom"
-          contain="true"
+          contain=true
         />
       </v-col>
       <v-col cols="7">
@@ -17,7 +17,7 @@
               src="../../assets/quadro.png"
               max-height="600"
               max-width="800"
-              contain="true"
+              contain=true
               >
               <v-row
                 align="center"
