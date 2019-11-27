@@ -1,15 +1,12 @@
 <template>
-  <v-container fluid class="background-home">
-    <v-row align="end" justify="start" class="ma-0">
-      <v-col cols="3">
+  <v-container fluid fill-height class="background-home pa-0">
+    <v-row class="ma-0" style="height: 100%">
+      <v-col cols="3" class="mt-auto pb-0">
         <v-img
           src="../../assets/clara.gif"
-          max-width="300"
-          max-height="400"
-          position="bottom"
+          max-width="450"
+          max-height="600"
           contain
-	        align="end"
-          justify="end"
         />
       </v-col>
       <v-col cols="7">
