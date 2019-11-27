@@ -1,17 +1,16 @@
 <template>
-  <v-container fluid class="background-home">
-    <v-row align="end" justify="start" class="ma-0">
-      <v-col cols="3">
+  <v-container fluid fill-height class="background-home pa-0">
+    <v-row class="ma-0" style="height: 100%">
+      <v-col cols="3" class="mt-auto pb-0">
         <v-img
           src="../../assets/clara.gif"
-          max-width="300"
-          max-height="400"
-          position="bottom"
-          contain=true
+          max-width="450"
+          max-height="600"
+          contain
         />
       </v-col>
       <v-col cols="7">
-        <v-row>
+        <v-row justify="center">
           <v-card flat class="background-home">
             <v-img
               src="../../assets/quadro.png"
@@ -39,20 +38,48 @@
             </v-img>
           </v-card>
         </v-row>
-        <v-row class="ma-10">
-          <v-col>
-            <v-row align="center" justify="center">
-              <v-btn rounded to="/" color="yellow lighten-3" class="mr-1">
-                Menu
+        <v-row class="ma-10"></v-row>
+        <v-row class="ma-10"></v-row>
+        <v-row align="center" justify="space-around" class="mt-10">
+          <v-card flat class="background-home" max-height="100" max-width="100">
+            <v-card-title>
+              <v-btn text to="/game">
+                <v-row align="center" justify="center" ma-0>
+                  <v-img
+                    max-height="100"
+                    max-width="120"
+                    src="../../assets/arrow1.png"
+                    >
+                    <v-card-title class="body-1">
+                      <p class="pa-0 ma-0 ml-5 mt-3">Voltar</p>
+                    </v-card-title>
+                  </v-img>
+                </v-row>
               </v-btn>
-              <v-btn rounded to="/game" color="yellow lighten-3" class="mr-1">
-                Voltar
+            </v-card-title>
+          </v-card>
+
+          <v-btn rounded to ="/" color="red lighten-3" class="mr-1">
+            Menu
+          </v-btn>
+
+          <v-card flat class="background-home" max-height="100" max-width="100">
+            <v-card-title>
+              <v-btn text @click="next" to="#">
+                <v-row align="center" justify="center">
+                  <v-img
+                    max-height="100"
+                    max-width="120"
+                    src="../../assets/arrow2.png"
+                    >
+                  <v-card-title class="body-1">
+                    <p class="ma-0 mr-5 mt-3">Avançar</p>
+                  </v-card-title>
+                  </v-img>
+                </v-row>
               </v-btn>
-              <v-btn rounded color="yellow lighten-3" class="mr-1" @click="next">
-                Avançar
-              </v-btn>
-            </v-row>
-          </v-col>
+            </v-card-title>
+          </v-card>
         </v-row>
       </v-col>
     </v-row>
