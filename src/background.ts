@@ -31,6 +31,7 @@ function createWindow () {
     // Load the index.html when not in development
     win.loadURL('app://./index.html')
   }
+  win.maximize()
 
   win.on('closed', () => {
     win = null
