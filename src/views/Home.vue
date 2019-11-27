@@ -12,7 +12,7 @@
               <v-img
                 src="../../assets/clara.gif"
                 position="botton"
-                contain=true
+                contain
                 class=""
                 style="position:fixed;bottom:0;max-height:82%;width:100%;"
               />
@@ -26,7 +26,7 @@
               max-width="600"
               max-height="500"
               position="top"
-              contain=true
+              contain
               />
             <v-row
               align="center"
@@ -41,7 +41,7 @@
                   max-width="600"
                   max-height="500"
                   position="top"
-                  contain=true
+                  contain
                 />
               </v-card-title>
             </v-row>
@@ -51,7 +51,7 @@
           <v-img
             src="../../assets/mesa.png"
             position="botton"
-            contain=true
+            contain
             class=""
             style="position:fixed;bottom:0;margin-left:1%;max-height:100%;width:55%;"
           />
@@ -60,7 +60,7 @@
               <v-img
                 src="../../assets/pot1.png"
                 position="botton"
-                contain=true
+                contain
                 class=""
                 style="position:fixed;bottom:4%;max-height:25%;width:9%;margin-left:-1%;"
               />
@@ -84,7 +84,7 @@
               <v-img
                 src="../../assets/potion2.png"
                 position="botton"
-                contain=true
+                contain
                 class=""
                 style="position:fixed;bottom:4%;max-height:25%;width:10%;margin-left:-1%;"
               />
@@ -109,7 +109,7 @@
               <v-img
                 src="../../assets/potion2.png"
                 position="botton"
-                contain=true
+                contain
                 class=""
                 style="position:fixed;bottom:4%;max-height:25%;width:10%;margin-left:-2%;"
               />
@@ -134,14 +134,14 @@
               <v-img
                 src="../../assets/potion3.png"
                 position="botton"
-                contain=true
+                contain
                 class=""
                 style="position:fixed;bottom:4%;max-height:25%;width:10%;margin-left:-6%;"
               />
             </v-row>
             <v-row align="center" justify="center" style="margin-left:-95%;">
               <v-card-title style="position:fixed;bottom:1%;max-height:100%;width:10%;">
-                <v-btn text @click="generateSentence">
+                <v-btn text @click="quit">
                   <v-row align="center" justify="center" ma-0 style="width:30%;margin-left:10%;margin-top:5%">
                     <v-img                                            
                       src="../../assets/placa.png"
@@ -160,6 +160,8 @@
 </template>
 
 <script>
+import { remote } from 'electron'
+
 export default {
   name: 'home',
   data () {
@@ -177,8 +179,9 @@ export default {
           console.log(error)
         })
     },
-    sair () {
-      open(location, '_self').close()
+    quit () {
+      let window = remote.getCurrentWindow()
+      window.close()
     }
   }
 }

@@ -16,7 +16,7 @@
               src="../../assets/quadro.png"
               max-height="600"
               max-width="800"
-              contain=true
+              contain
               >
               <v-row
                 align="center"
